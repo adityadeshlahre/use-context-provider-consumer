@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { PostCard, PostCardPost } from "~/components/PostCard";
 import { useParams } from "react-router";
+import ThemeToggle from "~/components/ThemeToggle";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -23,6 +24,9 @@ export default function Home() {
       </div>
       <div>
         <PostCardPost id={parseInt(id)} />
+      </div>
+      <div>
+        <ThemeToggle />
       </div>
     </>
   );

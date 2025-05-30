@@ -34,7 +34,11 @@ export const PostProvider: React.FC<PostProviderProps> = ({
 
   console.log("PostProvider", postQuery.data);
 
-  return <PostContext value={postQuery.data}>{children}</PostContext>;
+  return (
+    <PostContext.Provider value={postQuery.data}>
+      {children}
+    </PostContext.Provider>
+  );
 };
 
 export const usePostContext = () => {
