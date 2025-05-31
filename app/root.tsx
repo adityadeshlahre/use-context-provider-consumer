@@ -13,6 +13,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "./context/ThemeContext";
 import { UserProvider } from "./context/UserContext";
 import Header from "./components/Header";
+import { NotificationProvider } from "./context/NotificationContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -53,7 +54,9 @@ export default function App() {
         <UserProvider>
           <Header />
           <br />
-          <Outlet />
+          <NotificationProvider>
+            <Outlet />
+          </NotificationProvider>
         </UserProvider>
       </ThemeProvider>
     </QueryClientProvider>

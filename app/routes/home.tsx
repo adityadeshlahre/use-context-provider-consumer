@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { PostCard, PostCardPost } from "~/components/PostCard";
 import { useParams } from "react-router";
 import ThemeToggle from "~/components/ThemeToggle";
+import NotificationInit from "~/components/NotificationInit";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -27,6 +28,9 @@ export default function Home() {
       </div>
       <div>
         <ThemeToggle />
+      </div>
+      <div>
+        <NotificationInit />
       </div>
     </>
   );

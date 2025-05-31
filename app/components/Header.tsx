@@ -12,7 +12,7 @@ export default function Header() {
         <div>{user.user?.email}</div>
         <div>{user.user?.name}</div>
         <button
-          className="border-2 border-lime-400"
+          className="border-2 border-b-lime-900"
           onClick={() => {
             navigate("/1");
           }}
