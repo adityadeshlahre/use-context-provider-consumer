@@ -52,6 +52,7 @@ export default function App() {
       <ThemeProvider theme="dark">
         <UserProvider>
           <Header />
+          <br />
           <Outlet />
         </UserProvider>
       </ThemeProvider>

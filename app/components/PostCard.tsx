@@ -21,7 +21,7 @@ function PostCardHeader() {
   const post = usePostContext();
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <h2>{post.title}</h2>
     </div>
   );
@@ -31,7 +31,7 @@ function PostCardFooter() {
   const post = usePostContext();
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <p>{post.content}</p>
     </div>
   );
@@ -47,12 +47,13 @@ export function PostCardPost({ id }: PostCardProps) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <input
         ref={inputRef}
         // value={inputRef}
         type="text"
         placeholder="Post content"
+        className="border-2 border-lime-400 p-2 rounded"
       />
       <button onClick={handleUpdate}>Post Send</button>
     </div>
